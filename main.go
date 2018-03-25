@@ -1,12 +1,19 @@
 package main
 
 import (
-	"GoSpider/engine"
+
 	"GoSpider/zhenai/parser"
+	"GoSpider/engine"
+	"GoSpider/scheduler"
 )
 
 func main() {
-	engine.Run(engine.Request{
+	e:=engine.ConcurrentEngine{
+		Scheduler: &scheduler.SimpleScheduler{},
+		WorkerCount:10,
+	}
+
+	e.Run(engine.Request{
 		"http://www.zhenai.com/zhenghun",
 		parser.ParseCityList,
 	})
