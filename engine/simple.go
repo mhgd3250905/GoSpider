@@ -3,6 +3,7 @@ package engine
 import (
 	"GoSpider/fetcher"
 	"log"
+	"fmt"
 )
 
 type SimpleEngine struct {
@@ -40,6 +41,6 @@ func worker(r Request) (result ParseResult,err error) {
 		log.Printf("Fetcher:error fetching url %s:%v", r.Url, err)
 		return ParseResult{},err
 	}
-
+	fmt.Println(r.Url)
 	return r.ParserFunc(body),nil
 }

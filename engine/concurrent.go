@@ -18,6 +18,8 @@ func (e *ConcurrentEngine) Run(seeds ...Request) {
 
 	in := make(chan Request)
 	out := make(chan ParseResult)
+	e.Scheduler.ConfigureMasterWorkerChan(in)
+
 	for i := 0; i < e.WorkerCount; i++ {
 		createWorker(in, out)
 	}
@@ -29,7 +31,7 @@ func (e *ConcurrentEngine) Run(seeds ...Request) {
 	for {
 		result := <-out
 		for _, item := range result.Items {
-			fmt.Sprintf("Got item: %v ", item)
+			fmt.Printf("Got item: %v \n", item)
 		}
 
 		for _, request := range result.Requests {

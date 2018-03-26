@@ -13,7 +13,6 @@ import (
 )
 
 func Fetch(url string) ([]byte, error) {
-	fmt.Println("Fetcher URL ",url)
 	resp, err := http.Get(url)
 	if err != nil {
 		return nil, err
