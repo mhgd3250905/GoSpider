@@ -10,7 +10,7 @@ import (
 )
 
 func TestSave(t *testing.T) {
-	profile := modle.Profile{
+	expected := modle.Profile{
 		Age:        34,
 		Height:     162,
 		Weight:     57,
@@ -26,7 +26,7 @@ func TestSave(t *testing.T) {
 		Car:        "未购车",
 	}
 
-	id, err := save(profile)
+	id, err := save(expected)
 	if err != nil {
 		panic(err)
 	}
@@ -47,5 +47,15 @@ func TestSave(t *testing.T) {
 	}
 
 	log.Printf("%s",resp.Source)
+
+	var actual modle.Profile
+	err=json.Unmarshal(*resp.Source,&actual)
+	if err != nil {
+		panic(err)
+	}
+
+	if actual!=expected {
+		t.Errorf("got %v ; expecter %v",actual,expected)
+	}
 
 }
