@@ -3,23 +3,21 @@ package engine
 import (
 	"GoSpider/fetcher"
 	"log"
-	"fmt"
 )
 
 type SimpleEngine struct {
 }
 
-
-func (e SimpleEngine) Run(seeds ...Request){
+func (e SimpleEngine) Run(seeds ...Request) {
 	var requests []Request
-	for _,r:=range seeds{
-		requests=append(requests,r)
+	for _, r := range seeds {
+		requests = append(requests, r)
 	}
-	for len(requests)>0 {
+	for len(requests) > 0 {
 		r := requests[0]
 		requests = requests[1:]
 
-		parseResult,err:=worker(r)
+		parseResult, err := worker(r)
 		if err != nil {
 			continue
 		}
@@ -34,13 +32,12 @@ func (e SimpleEngine) Run(seeds ...Request){
 }
 
 //Fetcher+Parse
-func worker(r Request) (result ParseResult,err error) {
+func worker(r Request) (result ParseResult, err error) {
 	//调用Fetcher来获取body
 	body, err := fetcher.Fetch(r.Url)
 	if err != nil {
 		log.Printf("Fetcher:error fetching url %s:%v", r.Url, err)
-		return ParseResult{},err
+		return ParseResult{}, err
 	}
-	fmt.Println(r.Url)
-	return r.ParserFunc(body),nil
+	return r.ParserFunc(body), nil
 }
