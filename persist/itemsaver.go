@@ -4,10 +4,17 @@ import (
 	"log"
 	"github.com/olivere/elastic"
 	"context"
+	"GoSpider/engine"
+	"github.com/pkg/errors"
 )
 
-func ItemSaver() chan interface{} {
-	out := make(chan interface{})
+func ItemSaver(index string) (itemChan chan engine.Item,err error) {
+	client, err := elastic.NewClient()
+	if err != nil {
+		return nil, err
+	}
+
+	out := make(chan engine.Item)
 	go func() {
 		itemCount := 0
 		for {
@@ -15,30 +22,42 @@ func ItemSaver() chan interface{} {
 			log.Printf("Item Saver: Got item #%d: %v", itemCount, item)
 			itemCount++
 
-			save(item)
+			err := save(client,index, item)
+			if err != nil {
+				log.Printf("Item saver:error saving item %v : %v", item, err)
+			}
 		}
 	}()
-	return out
+	return out, nil
 }
 
 //save item
-func save(item interface{}) (id string, err error) {
-	client, err := elastic.NewClient()
+func save(client *elastic.Client,index string, item engine.Item) (err error) {
+
 	if err != nil {
-		return "", err
+		return err
+	}
+
+	if item.Type == "" {
+		return errors.New("Must supply Type")
 	}
 
 	//save data -> index
-	resp, err := client.Index().
-		Index("dating_profile").
-		Type("zhenai").
-		BodyJson(item).
-		Do(context.Background())
+	indexService := client.Index().
+		Index(index).
+		Type(item.Type).
+		BodyJson(item)
 
-	if err != nil {
-		return "", err
+	if item.Id != "" {
+		indexService.Id(item.Id)
 	}
 
-	return resp.Id, nil
+	_, err = indexService.Do(context.Background())
+
+	if err != nil {
+		return err
+	}
+
+	return nil
 
 }
