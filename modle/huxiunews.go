@@ -4,8 +4,9 @@ import "encoding/json"
 
 //珍爱网数据modle
 type HuxiuNews struct {
-	Title       string
-	Url       string
+	Title  string
+	Url    string
+	Column string
 }
 
 func FromJsonObjHuxiu(o interface{}) (HuxiuNews, error) {
@@ -14,6 +15,6 @@ func FromJsonObjHuxiu(o interface{}) (HuxiuNews, error) {
 	if err != nil {
 		return news, err
 	}
-	err = json.Unmarshal(s,&news)
+	err = json.Unmarshal(s, &news)
 	return news, err
 }

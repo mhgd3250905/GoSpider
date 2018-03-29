@@ -1,5 +1,10 @@
 package engine
 
+import (
+	"log"
+	"GoSpider/modle"
+)
+
 type ConcurrentEngine struct {
 	Scheduler   Scheduler
 	WorkerCount int
@@ -33,6 +38,7 @@ func (e *ConcurrentEngine) Run(seeds ...Request) {
 	for {
 		result := <-out
 		for _, item := range result.Items {
+			log.Printf("id: %s,title: %s",item,item.Payload.(modle.HuxiuNews).Title)
 			//save item
 			go func() {
 				e.ItemChan <- item
