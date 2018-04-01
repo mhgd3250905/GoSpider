@@ -39,7 +39,7 @@ func (e *ConcurrentEngine) Run(seeds ...Request) {
 	for {
 		result := <-out
 		for _, item := range result.Items {
-			log.Printf("id: %s,title: %s",item,item.Payload.(modle.HuxiuNews).Title)
+			log.Printf("id: %s,title: %s",item,item.Payload.(modle.News).Title)
 			curItem:=item
 			//save item
 			go func() {

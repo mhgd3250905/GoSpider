@@ -49,7 +49,7 @@ func ParseColumn(contents []byte, url string, column string) engine.ParseResult 
 
 	var items []engine.Item
 	for i := 0; i < len(matchs); i++ {
-		new := modle.HuxiuNews{}
+		new := modle.News{}
 		new.Title = string(matchs[i][1])
 		new.Url = HOST + string(matchs[i][2])
 		new.ImgSrc = string(matchs[i][3])
