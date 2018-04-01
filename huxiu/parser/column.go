@@ -43,33 +43,6 @@ var blockRe = regexp.MustCompile(`<div class="mod-thumb pull-left ">
 
 var idUrlRe = regexp.MustCompile(`/article/([\d]+).html`)
 
-//var blockRe=regexp.MustCompile(`<a class="transition" title=".+"
-//                   href="/article/[\d]+.html" target="_blank">
-//                                            <img class="lazy"
-//                             data-original="https://img.huxiucdn.com/article/cover/[^"]+"
-//`)
-//
-//var titleRe=regexp.MustCompile(`<a class="transition" title="(.+)"
-//                   href="/article/[\d]+.html" target="_blank">
-//                                            <img class="lazy"
-//                             data-original="https://img.huxiucdn.com/article/cover/[^"]+"
-//`)
-//var urlRe=regexp.MustCompile(`<a class="transition" title=".+"
-//                   href="(/article/[\d]+.html)" target="_blank">
-//                                            <img class="lazy"
-//                             data-original="https://img.huxiucdn.com/article/cover/[^"]+"
-//`)
-//var imageSrcRe=regexp.MustCompile(`<a class="transition" title=".+"
-//                   href="/article/[\d]+.html" target="_blank">
-//                                            <img class="lazy"
-//                             data-original="(https://img.huxiucdn.com/article/cover/[^"]+)"
-//`)
-//var idUrlRe=regexp.MustCompile(`<a class="transition" title=".+"
-//                   href="/article/([\d]+).html" target="_blank">
-//                                            <img class="lazy"
-//                             data-original="(https://img.huxiucdn.com/article/cover/[^"]+)"
-//`)
-
 func ParseColumn(contents []byte, url string, column string) engine.ParseResult {
 
 	matchs := blockRe.FindAllSubmatch(contents, -1)
