@@ -9,6 +9,7 @@ type ConcurrentEngine struct {
 	Scheduler   Scheduler
 	WorkerCount int
 	ItemChan    chan Item
+	Header map[string]string
 }
 
 type Scheduler interface {
@@ -28,7 +29,7 @@ func (e *ConcurrentEngine) Run(seeds ...Request) {
 	e.Scheduler.Run()
 
 	for i := 0; i < e.WorkerCount; i++ {
-		createWorker(e.Scheduler.WorkerChan(), out, e.Scheduler)
+		createWorker(e.Scheduler.WorkerChan(), out, e.Scheduler,e.Header)
 	}
 
 	for _, r := range seeds {
@@ -52,7 +53,7 @@ func (e *ConcurrentEngine) Run(seeds ...Request) {
 	}
 }
 
-func createWorker(in chan Request, out chan ParseResult, ready ReadyNotifier) {
+func createWorker(in chan Request, out chan ParseResult, ready ReadyNotifier,header map[string]string) {
 	go func() {
 		for {
 			ready.WorkerReady(in)
@@ -61,7 +62,7 @@ func createWorker(in chan Request, out chan ParseResult, ready ReadyNotifier) {
 			//if isDupllication(request.Url){
 			//	continue
 			//}
-			result, err := worker(request)
+			result, err := worker(request,header)
 			if err != nil {
 				continue
 			}

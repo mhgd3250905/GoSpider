@@ -2,11 +2,14 @@ package modle
 
 import "encoding/json"
 
-//珍爱网数据modle
+//虎嗅数据modle
 type HuxiuNews struct {
-	Title  string
-	Url    string
-	Column string
+	Title   string
+	Url     string
+	ImgSrc  string
+	TimeGap string
+	Desc    string
+	//Column  string
 }
 
 func FromJsonObjHuxiu(o interface{}) (HuxiuNews, error) {

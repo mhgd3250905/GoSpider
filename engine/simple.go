@@ -5,6 +5,7 @@ import (
 )
 
 type SimpleEngine struct {
+	Header map[string]string
 }
 
 func (e SimpleEngine) Run(seeds ...Request) {
@@ -16,7 +17,7 @@ func (e SimpleEngine) Run(seeds ...Request) {
 		r := requests[0]
 		requests = requests[1:]
 
-		parseResult, err := worker(r)
+		parseResult, err := worker(r,e.Header)
 		if err != nil {
 			continue
 		}
