@@ -1,7 +1,6 @@
 package parser
 
 import (
-	"fmt"
 	"GoSpider/engine"
 	"regexp"
 	"GoSpider/modle"
@@ -12,7 +11,7 @@ import (
 2->imgUrl
 3->title
 */
-var itemRe=regexp.MustCompile(`<div class="wrap">
+var itemRe = regexp.MustCompile(`<div class="wrap">
                         <div class="box"><a href="(/story/[^d]+)" class="link-button"><img
                                 src="([^"]+)"
                                 class="preview-image"><span class="title">（[^<]+）</span></a></div>
@@ -20,9 +19,9 @@ var itemRe=regexp.MustCompile(`<div class="wrap">
 
 var idUrlRe = regexp.MustCompile(`/story/（[^d]+）`)
 
-var HOST=`https://daily.zhihu.com/`
+var HOST = `https://daily.zhihu.com/`
 
-func ParseZhihuHome(contents []byte,_ string) engine.ParseResult {
+func ParseZhihuHome(contents []byte, _ string) engine.ParseResult {
 	matchs := itemRe.FindAllSubmatch(contents, -1)
 
 	var items []engine.Item
