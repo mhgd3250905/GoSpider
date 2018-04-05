@@ -34,6 +34,7 @@ func ItemSaverRedis(index string) (itemChan chan engine.Item, err error) {
 			log.Printf("Item Saver: Got item #%d: %+v", itemCount, item)
 			itemCount++
 
+
 			err := saveRedis(conn, index, item)
 			if err != nil {
 				log.Printf("Item saver:error saving item %v : %v", item, err)
