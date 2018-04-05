@@ -61,7 +61,7 @@ func saveRedis(conn redis.Conn, index string, item engine.Item) (err error) {
 		return err
 	}
 
-	_,err=conn.Do("ZADD", "huxiu", id, string(itemBuf))
+	_,err=conn.Do("ZADD", index, id, string(itemBuf))
 
 	if err != nil {
 		return err

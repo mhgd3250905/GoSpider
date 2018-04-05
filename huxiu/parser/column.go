@@ -53,7 +53,7 @@ func ParseColumn(contents []byte, url string, column string) engine.ParseResult 
 		new.Title = string(matchs[i][1])
 		new.Url = HOST + string(matchs[i][2])
 		new.ImgSrc = string(matchs[i][3])
-		new.TimeGap = string(matchs[i][5])
+		//new.TimeGap = string(matchs[i][5])
 		new.Desc = string(matchs[i][6])
 		//new.Column = column
 

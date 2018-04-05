@@ -5,12 +5,13 @@ import (
 	"GoSpider/scheduler"
 	"GoSpider/persist"
 	"GoSpider/zhihu/parser"
+	//"time"
 )
 
 func main() {
 	//for {
 	//	go func() {
-	//		itemChan, err := persist.ItemSaverRedis("dating_profile_2")
+	//		itemChan, err := persist.ItemSaverRedis("huxiu")
 	//		if err != nil {
 	//			panic(err)
 	//		}
@@ -33,7 +34,7 @@ func main() {
 	//	<-time.After(time.Minute * 30)
 	//}
 
-	itemChan, err := persist.ItemSaverRedis("dating_profile_2")
+	itemChan, err := persist.ItemSaverRedis("zhihu")
 	if err != nil {
 		panic(err)
 	}
