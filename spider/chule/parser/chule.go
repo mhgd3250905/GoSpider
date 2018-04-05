@@ -4,6 +4,9 @@ import (
 	"GoSpider/engine"
 	"regexp"
 	"GoSpider/modle"
+	"fmt"
+	"github.com/PuerkitoBio/goquery"
+	"bytes"
 )
 
 /*
@@ -23,8 +26,8 @@ import (
                 </dl>
             </a>
 */
-var blockRe = regexp.MustCompile(`<a class="fn-clear" href="(/article/[\d]+.html)" target="_blank" title="(.+)">
-                <img class="fn-left" src="(.+)" width="[\d]+" height="[\d]+" alt="" />
+var blockRe = regexp.MustCompile(`<a class="fn-clear" href="(/article/[\d]+\.html)" target="_blank" title="(.+)">
+                <img class="fn-left" src="([^\"]+)" width="[\d]+" height="[\d]+" alt="" />
                 <dl class="fn-left">
                     <dd class="fn-clear"><span class="fn-left"><em>[^<]+</em>[^<]+</span><span class="fn-right">[^<]+</span></dd>
                     <dt>[^<]+</dt>
@@ -35,6 +38,21 @@ var blockRe = regexp.MustCompile(`<a class="fn-clear" href="(/article/[\d]+.html
 var idUrlRe = regexp.MustCompile(`/article/([\d]+).html`)
 
 func ParseChule(contents []byte, _ string) engine.ParseResult {
+
+	result := engine.ParseResult{}
+
+	doc, err := goquery.NewDocumentFromReader(bytes.NewReader(contents))
+	if err != nil {
+		return result
+	}
+
+	divContainer:=doc.Find("div .category-list").Eq(0)
+
+	divContainer.Find("a .fn-clear").Has("title").Each(func(i int, selection *goquery.Selection) {
+		fmt.Println(selection.Html())
+	})
+
+
 
 	matchs := blockRe.FindAllSubmatch(contents, -1)
 
@@ -57,7 +75,7 @@ func ParseChule(contents []byte, _ string) engine.ParseResult {
 		})
 	}
 
-	result := engine.ParseResult{
+	result = engine.ParseResult{
 		Items: items,
 	}
 	return result
