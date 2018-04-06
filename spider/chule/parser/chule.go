@@ -4,7 +4,6 @@ import (
 	"GoSpider/engine"
 	"regexp"
 	"GoSpider/modle"
-	"fmt"
 	"github.com/PuerkitoBio/goquery"
 	"bytes"
 )
@@ -37,7 +36,11 @@ var blockRe = regexp.MustCompile(`<a class="fn-clear" href="(/article/[\d]+\.htm
 
 var idUrlRe = regexp.MustCompile(`/article/([\d]+).html`)
 
+var Host=`http://www.chuapp.com`
+
 func ParseChule(contents []byte, _ string) engine.ParseResult {
+
+	//fmt.Println(string(contents))
 
 	result := engine.ParseResult{}
 
@@ -46,34 +49,29 @@ func ParseChule(contents []byte, _ string) engine.ParseResult {
 		return result
 	}
 
-	divContainer:=doc.Find("div .category-list").Eq(0)
-
-	divContainer.Find("a .fn-clear").Has("title").Each(func(i int, selection *goquery.Selection) {
-		fmt.Println(selection.Html())
-	})
-
-
-
-	matchs := blockRe.FindAllSubmatch(contents, -1)
-
 	var items []engine.Item
-	for i := 0; i < len(matchs); i++ {
-		new := modle.News{}
-		new.Url = string(matchs[i][1])
-		new.Title = HOST + string(matchs[i][2])
-		new.ImgSrc = string(matchs[i][3])
-		//new.TimeGap = string(matchs[i][5])
-		new.Desc = string(matchs[i][4])
-		//new.Column = column
 
-		//fmt.Printf("block:%s ,title:%s ,url:%s ,column:%s\n",matchs[i],new.Title,new.Url,column)
+	divContainer := doc.Find("div .category-list").Eq(0)
+
+	divContainer.Find("a.fn-clear").Each(func(i int, s *goquery.Selection) {
+		new := modle.News{}
+
+		url, _ := s.Attr("href")
+		title, _ := s.Attr("title")
+		imgSrc, _ := s.Find("img.fn-left").Eq(0).Attr("src")
+		desc := s.Find("dl.fn-left").Eq(0).Find("dd").Eq(1).Text()
+
+		new.Url = Host+url
+		new.Title = title
+		new.ImgSrc = imgSrc
+		new.Desc = desc
 
 		items = append(items, engine.Item{
-			Type:    "huxiu",
+			Type:    "chule",
 			Id:      extractString([]byte(new.Url), idUrlRe),
 			Payload: new,
 		})
-	}
+	})
 
 	result = engine.ParseResult{
 		Items: items,
