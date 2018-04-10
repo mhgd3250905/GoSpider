@@ -6,6 +6,7 @@ import (
 	"GoSpider/engine"
 	"github.com/pkg/errors"
 	"encoding/json"
+	"GoSpider/modle"
 )
 
 func ItemSaverRedis(index string) (itemChan chan engine.Item, err error) {
@@ -21,23 +22,41 @@ func ItemSaverRedis(index string) (itemChan chan engine.Item, err error) {
 	//}
 	//测试连接
 	if result, err := conn.Do("ping"); result != "PONG" {
-		return nil, errors.Errorf("Redis ping fail %v",err)
+		return nil, errors.Errorf("Redis ping fail %v", err)
 
 	}
 
-
 	out := make(chan engine.Item)
+
+	//saveMaps:=make(map[string]bool)
+
 	go func() {
 		itemCount := 0
 		for {
 			item := <-out
+
+			//if saveMaps[item.Id] {
+			//	fmt.Println("item 已经保存过了，跳过")
+			//	continue
+			//}
+			//
+			//saveMaps[item.Id]=true
+
 			log.Printf("Item Saver: Got item #%d: %+v", itemCount, item)
 			itemCount++
 
 
-			err := saveRedis(conn, index, item)
-			if err != nil {
-				log.Printf("Item saver:error saving item %v : %v", item, err)
+			if item.Type == "meizi" {
+				news, err := modle.FromJsonObjNews(item.Payload)
+				if err != nil {
+					continue
+				}
+				go DownloadFile(news.Url, news.Title, item.Id)
+			}else {
+				err := saveRedis(conn, index, item)
+				if err != nil {
+					log.Printf("Item saver:error saving item %v : %v", item, err)
+				}
 			}
 		}
 	}()
@@ -57,12 +76,12 @@ func saveRedis(conn redis.Conn, index string, item engine.Item) (err error) {
 
 	id := item.Id
 
-	itemBuf,err:=json.Marshal(item)
+	itemBuf, err := json.Marshal(item)
 	if err != nil {
 		return err
 	}
 
-	_,err=conn.Do("ZADD", index, id, string(itemBuf))
+	_, err = conn.Do("ZADD", index, id, string(itemBuf))
 
 	if err != nil {
 		return err

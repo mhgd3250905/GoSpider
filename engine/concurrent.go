@@ -1,15 +1,14 @@
 package engine
 
 import (
-	"log"
-	"GoSpider/modle"
+	"sync"
 )
 
 type ConcurrentEngine struct {
 	Scheduler   Scheduler
 	WorkerCount int
 	ItemChan    chan Item
-	Header map[string]string
+	Header      map[string]string
 }
 
 type Scheduler interface {
@@ -29,7 +28,7 @@ func (e *ConcurrentEngine) Run(seeds ...Request) {
 	e.Scheduler.Run()
 
 	for i := 0; i < e.WorkerCount; i++ {
-		createWorker(e.Scheduler.WorkerChan(), out, e.Scheduler,e.Header)
+		createWorker(e.Scheduler.WorkerChan(), out, e.Scheduler, e.Header)
 	}
 
 	for _, r := range seeds {
@@ -39,8 +38,8 @@ func (e *ConcurrentEngine) Run(seeds ...Request) {
 	for {
 		result := <-out
 		for _, item := range result.Items {
-			log.Printf("id: %s,title: %s",item,item.Payload.(modle.News).Title)
-			curItem:=item
+			//log.Printf("id: %s,title: %s",item,item.Payload.(modle.News).Title)
+			curItem := item
 			//save item
 			go func() {
 				e.ItemChan <- curItem
@@ -53,16 +52,19 @@ func (e *ConcurrentEngine) Run(seeds ...Request) {
 	}
 }
 
-func createWorker(in chan Request, out chan ParseResult, ready ReadyNotifier,header map[string]string) {
+
+
+
+func createWorker(in chan Request, out chan ParseResult, ready ReadyNotifier, header map[string]string) {
 	go func() {
 		for {
 			ready.WorkerReady(in)
 			request := <-in
 			//判断是否重复
-			//if isDupllication(request.Url){
-			//	continue
-			//}
-			result, err := worker(request,header)
+			if isDupllication(request.Url) {
+				continue
+			}
+			result, err := worker(request, header)
 			if err != nil {
 				continue
 			}
@@ -71,13 +73,34 @@ func createWorker(in chan Request, out chan ParseResult, ready ReadyNotifier,hea
 	}()
 }
 
-//去重复
-var visitedUrls=make(map[string]bool)
+type LockMap struct {
+	sync.RWMutex
+	Map map[string]bool
 
-func isDupllication(url string) bool{
-	if visitedUrls[url] {
+}
+
+
+func (d *LockMap) Get(key string) bool {
+	d.RLock()
+	value := d.Map[key]
+	d.RUnlock()
+	return value
+}
+
+func (d *LockMap) Set(key string, value bool) {
+	d.Lock()
+	d.Map[key] = value
+	d.Unlock()
+}
+
+
+//去重复
+var visitedUrls = LockMap{Map:make(map[string]bool)}
+
+func isDupllication(url string) bool {
+	if visitedUrls.Get(url) {
 		return true
 	}
-	visitedUrls[url]=true
+	visitedUrls.Set(url, true)
 	return false
 }

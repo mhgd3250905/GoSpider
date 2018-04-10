@@ -12,7 +12,7 @@ type News struct {
 	//Column  string
 }
 
-func FromJsonObjHuxiu(o interface{}) (News, error) {
+func FromJsonObjNews(o interface{}) (News, error) {
 	var news News
 	s, err := json.Marshal(o)
 	if err != nil {
