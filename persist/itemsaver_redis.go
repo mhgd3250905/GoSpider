@@ -7,6 +7,7 @@ import (
 	"github.com/pkg/errors"
 	"encoding/json"
 	"GoSpider/modle"
+	"time"
 )
 
 func ItemSaverRedis(index string) (itemChan chan engine.Item, err error) {
@@ -51,6 +52,7 @@ func ItemSaverRedis(index string) (itemChan chan engine.Item, err error) {
 				if err != nil {
 					continue
 				}
+				time.Sleep(time.Millisecond*50)
 				go DownloadFile(news.Url, news.Title, item.Id)
 			}else {
 				err := saveRedis(conn, index, item)

@@ -9,6 +9,8 @@ import (
 
 var idUrlRe = regexp.MustCompile(`/article/([\d]+).html`)
 
+var meiziListPageRe=regexp.MustCompile(`(http://www.mzitu.com/.+/page/[\d]+/)`)
+
 func ParseMeizi(contents []byte,_ string) engine.ParseResult {
 
 	result := engine.ParseResult{}
@@ -27,6 +29,14 @@ func ParseMeizi(contents []byte,_ string) engine.ParseResult {
 			ParseMeiziDteail,
 		})
 	})
+
+	matchs:=meiziListPageRe.FindAllSubmatch(contents,-1);
+	for _, m := range matchs {
+		result.Requests = append(result.Requests, engine.Request{
+			string(m[1]),
+			ParseMeizi,
+		})
+	}
 
 	return result
 }
