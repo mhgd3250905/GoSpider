@@ -23,6 +23,7 @@ type ReadyNotifier interface {
 }
 
 func (e *ConcurrentEngine) Run(seeds ...Request) {
+	visitedUrls=LockMap{Map:make(map[string]bool)}
 
 	out := make(chan ParseResult)
 	e.Scheduler.Run()

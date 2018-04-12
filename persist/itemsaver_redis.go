@@ -46,7 +46,6 @@ func ItemSaverRedis(index string) (itemChan chan engine.Item, err error) {
 			log.Printf("Item Saver: Got item #%d: %+v", itemCount, item)
 			itemCount++
 
-
 			if item.Type == "meizi" {
 				news, err := modle.FromJsonObjNews(item.Payload)
 				if err != nil {

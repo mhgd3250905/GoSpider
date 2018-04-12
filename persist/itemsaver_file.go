@@ -36,7 +36,7 @@ func DownloadFile(url string, name string,id string) {
 
 	name=strings.Replace(name,":","_",-1);
 
-	dirPath:=fmt.Sprintf("downloads/%s",name)
+	dirPath:=fmt.Sprintf("./downloads/%s",name)
 	if exist, _ := PathExists(dirPath);!exist {
 		os.Mkdir(dirPath,os.ModePerm)
 	}

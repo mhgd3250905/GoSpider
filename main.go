@@ -7,15 +7,16 @@ import (
 	chule "GoSpider/spider/chule/parser"
 	huxiu "GoSpider/spider/huxiu/parser"
 	ke36 "GoSpider/spider/36ke/parser"
-	//meizi "GoSpider/spider/meizi/parser"
 	ifan "GoSpider/spider/ifan/parser"
-	//"time"
-	"time"
+
 	"fmt"
+	"time"
 )
 
 func main() {
 	for {
+
+
 		go func() {
 			itemChan, err := persist.ItemSaverRedis("huxiu")
 			if err != nil {
@@ -100,7 +101,7 @@ func main() {
 
 		fmt.Println("等待30分钟后再次获取资源...")
 
-		<-time.After(time.Minute * 30)
+		<-time.After(time.Minute * 15)
 	}
 
 	//itemChan, err := persist.ItemSaverRedis("meizi")
