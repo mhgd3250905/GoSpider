@@ -31,6 +31,10 @@ func ParsePingwest(contents []byte, host string) engine.ParseResult {
 		title := a.Text()
 		desc := s.Find("div.des").Eq(0).Text()
 		imgSrcStr, _ := s.Find("div.news-thumb").Eq(0).Attr("style")
+		matchs:=imgSrcRe.FindAllStringSubmatch(imgSrcStr, -1)
+		if len(matchs)==0 {
+			return
+		}
 		imgSrc := imgSrcRe.FindAllStringSubmatch(imgSrcStr, -1)[0][1]
 
 		new := modle.News{}
