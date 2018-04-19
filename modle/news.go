@@ -9,6 +9,8 @@ type News struct {
 	ImgSrc  string
 	TimeGap string
 	Desc    string
+	Content string
+	Author  string
 	//Column  string
 }
 

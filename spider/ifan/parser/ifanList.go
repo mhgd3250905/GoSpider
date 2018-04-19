@@ -5,8 +5,14 @@ import (
 	"GoSpider/engine"
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
-	"io"
+	"bytes"
 )
+
+/**
+1.categoryUrl
+2.page
+ */
+var categoryUrlModle=`%s?page=%d&pajax=1&post_id__lt=9999999`
 
 const HOST = `https://www.ifanr.com/`
 
@@ -17,7 +23,7 @@ var ifanCategoryRe = regexp.MustCompile(`<li class="menu-wrap__item menu-wrap-se
 
 func ParseIfanList(contents []byte, host string) engine.ParseResult {
 	//获取category
-	goquery.NewDocumentFromReader()
+	goquery.NewDocumentFromReader(bytes.NewReader(contents))
 
 
 	matchs := ifanCategoryRe.FindAllSubmatch(contents, -1)

@@ -5,7 +5,7 @@ import (
 	"regexp"
 )
 
-const HOST = `https://www.huxiu.com/`
+const HOST = `https://www.huxiu.com`
 const columnListRe = `<a href="(/channel/[\d]+.html)" [^>]+>([^<]+)</a>`
 
 func ParseColumnList(contents []byte, host string) engine.ParseResult {

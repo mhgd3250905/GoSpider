@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad952bb2-212d-4054-83da-c92e28e35503" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/spider.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/spider/huxiu/parser/columnSource.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/spider/huxiuDetail/parser/column.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/spider/huxiuDetail/parser/columnDetail.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/spider/huxiuDetail/parser/columnList.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/spider/huxiuDetail/parser/columnSource.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/engine/concurrent.go" afterPath="$PROJECT_DIR$/engine/concurrent.go" />
       <change beforePath="$PROJECT_DIR$/main.exe" afterPath="$PROJECT_DIR$/main.exe" />
       <change beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
-      <change beforePath="$PROJECT_DIR$/persist/itemsaver_file.go" afterPath="$PROJECT_DIR$/persist/itemsaver_file.go" />
-      <change beforePath="$PROJECT_DIR$/persist/itemsaver_redis.go" afterPath="$PROJECT_DIR$/persist/itemsaver_redis.go" />
+      <change beforePath="$PROJECT_DIR$/modle/news.go" afterPath="$PROJECT_DIR$/modle/news.go" />
+      <change beforePath="$PROJECT_DIR$/spider/huxiu/parser/column.go" afterPath="$PROJECT_DIR$/spider/huxiu/parser/column.go" />
+      <change beforePath="$PROJECT_DIR$/spider/huxiu/parser/columnList.go" afterPath="$PROJECT_DIR$/spider/huxiu/parser/columnList.go" />
+      <change beforePath="$PROJECT_DIR$/spider/ifan/parser/ifanList.go" afterPath="$PROJECT_DIR$/spider/ifan/parser/ifanList.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,59 +23,110 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
               <folding>
-                <element signature="e#14#249#0" expanded="true" />
-                <element signature="e#1051#1553#0" expanded="false" />
-                <element signature="e#1569#2072#0" expanded="false" />
+                <element signature="e#14#337#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="concurrent.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engine/concurrent.go">
+      <file leaf-file-name="column.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spider/huxiuDetail/parser/column.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+            <state relative-caret-position="567">
+              <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+              <folding>
+                <element signature="e#16#88#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="types.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/engine/types.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fetcher.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fetcher/fetcher.go">
+      <file leaf-file-name="columnDetail.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spider/huxiuDetail/parser/columnDetail.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="415">
+              <caret line="48" column="23" lean-forward="true" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="worker.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engine/worker.go">
+      <file leaf-file-name="columnList.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spider/huxiuDetail/parser/columnList.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="columnSource.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spider/huxiuDetail/parser/columnSource.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1523680356547" expanded="true" signature="6773:7215" ph="..." />
+                <marker date="1523680356547" expanded="true" signature="6791:6841" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="6869:6919" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="6967:7001" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="7020:7074" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="7085:7114" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="7177:7207" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="69911:71513" ph="..." />
+                <marker date="1523680356547" expanded="true" signature="69975:70808" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70048:70800" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70170:70241" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70277:70414" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70320:70400" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70454:70620" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70503:70598" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70678:70788" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70721:70774" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70852:70969" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="71013:71130" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="71063:71124" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="71177:71376" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="71221:71370" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modle/news.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+              <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="itemsaver_redis.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/persist/itemsaver_redis.go">
+      <file leaf-file-name="columnList.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spider/huxiu/parser/columnList.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-97">
-              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding>
-                <element signature="e#17#157#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="147">
+              <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,9 +134,42 @@
       <file leaf-file-name="column.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider/huxiu/parser/column.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-630">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="903">
+              <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="18" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="columnSource.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spider/huxiu/parser/columnSource.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5523">
+              <caret line="263" column="25" lean-forward="false" selection-start-line="263" selection-start-column="25" selection-end-line="263" selection-end-column="25" />
+              <folding>
+                <marker date="1523680356547" expanded="true" signature="6773:7215" ph="..." />
+                <marker date="1523680356547" expanded="true" signature="6791:6841" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="6869:6919" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="6967:7001" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="7020:7074" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="7085:7114" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="7177:7207" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="69911:71513" ph="..." />
+                <marker date="1523680356547" expanded="true" signature="69975:70808" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70048:70800" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70170:70241" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70277:70414" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70320:70400" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70454:70620" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70503:70598" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70678:70788" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70721:70774" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="70852:70969" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="71013:71130" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="71063:71124" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="71177:71376" ph="{...}" />
+                <marker date="1523680356547" expanded="true" signature="71221:71370" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,8 +180,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go File" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mod-b mod-art clearfix</find>
+    </findStrings>
   </component>
   <component name="GOROOT" path="D:\Golang" />
   <component name="Git.Settings">
@@ -106,8 +199,17 @@
         <option value="$PROJECT_DIR$/engine/dupllication.go" />
         <option value="$PROJECT_DIR$/persist/dupllication.go" />
         <option value="$PROJECT_DIR$/engine/concurrent.go" />
-        <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/persist/itemsaver_redis.go" />
+        <option value="$PROJECT_DIR$/spider/pingwest/parser/pingwestList.go" />
+        <option value="$PROJECT_DIR$/spider/pingwest/parser/pingwest.go" />
+        <option value="$PROJECT_DIR$/spider/ifan/parser/ifanList.go" />
+        <option value="$PROJECT_DIR$/spider/huxiu/parser/columnList.go" />
+        <option value="$PROJECT_DIR$/spider/huxiu/parser/columnSource.html" />
+        <option value="$PROJECT_DIR$/spider/huxiu/parser/column.go" />
+        <option value="$PROJECT_DIR$/modle/news.go" />
+        <option value="$PROJECT_DIR$/spider/huxiuDetail/parser/column.go" />
+        <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/spider/huxiuDetail/parser/columnDetail.go" />
       </list>
     </option>
   </component>
@@ -117,11 +219,14 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="123" />
-    <option name="y" value="116" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="484" />
+    <option name="y" value="44" />
     <option name="width" value="1240" />
     <option name="height" value="934" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -139,7 +244,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,6 +260,11 @@
               <item name="GoSpider" type="b2602c69:ProjectViewProjectNode" />
               <item name="GoSpider" type="462c0819:PsiDirectoryNode" />
               <item name="fetcher" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="modle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GoSpider" type="b2602c69:ProjectViewProjectNode" />
@@ -180,10 +289,50 @@
               <item name="huxiu" type="462c0819:PsiDirectoryNode" />
               <item name="parser" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="GoSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="spider" type="462c0819:PsiDirectoryNode" />
+              <item name="huxiuDetail" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="spider" type="462c0819:PsiDirectoryNode" />
+              <item name="huxiuDetail" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="spider" type="462c0819:PsiDirectoryNode" />
+              <item name="ifan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="spider" type="462c0819:PsiDirectoryNode" />
+              <item name="ifan" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="spider" type="462c0819:PsiDirectoryNode" />
+              <item name="pingwest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="spider" type="462c0819:PsiDirectoryNode" />
+              <item name="pingwest" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -192,6 +341,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/main.go" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\GoPath\src\GoSpider\spider\huxiuDetail\parser" />
+      <recent name="G:\GoPath\src\GoSpider\spider" />
+      <recent name="G:\GoPath\src\GoSpider\spider\pingwest\parser" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -220,25 +377,25 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.159375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.359491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.359491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42629904" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -252,84 +409,479 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/fetcher/fetcher.go</url>
-          <line>18</line>
-          <properties />
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/spider/pingwest/parser/pingwest.go</url>
+          <line>56</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/spider/huxiu/parser/column.go</url>
+          <line>46</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/spider/huxiuDetail/parser/columnDetail.go</url>
+          <line>21</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/spider/huxiuDetail/parser/columnDetail.go</url>
+          <line>42</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spider/huxiu/parser/column.go">
+    <entry file="file://$PROJECT_DIR$/spider/ifan/parser/ifanList.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="336">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fetcher/fetcher.go">
+    <entry file="file://$PROJECT_DIR$/spider/chule/parser/chule.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/concurrent.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2121">
+          <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/worker.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        <state relative-caret-position="252">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/dupllication.go">
+    <entry file="file://$PROJECT_DIR$/spider/36ke/parser/topic.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/ifan/parser/ifan.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1701">
+          <caret line="85" column="5" lean-forward="false" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#14#337#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/huxiu/parser/columnList.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/persist/dupllication.go">
+    <entry file="file://$PROJECT_DIR$/spider/huxiu/parser/column.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="735">
+          <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/huxiu/parser/columnSource.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5523">
+          <caret line="263" column="25" lean-forward="true" selection-start-line="263" selection-start-column="25" selection-end-line="263" selection-end-column="25" />
+          <folding>
+            <marker date="1523680356547" expanded="true" signature="6773:7215" ph="..." />
+            <marker date="1523680356547" expanded="true" signature="6791:6841" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="6869:6919" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="6967:7001" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="7020:7074" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="7085:7114" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="7177:7207" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="69911:71513" ph="..." />
+            <marker date="1523680356547" expanded="true" signature="69975:70808" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70048:70800" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70170:70241" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70277:70414" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70320:70400" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70454:70620" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70503:70598" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70678:70788" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70721:70774" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70852:70969" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="71013:71130" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="71063:71124" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="71177:71376" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="71221:71370" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/ifan/parser/ifanList.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/chule/parser/chule.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/worker.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/36ke/parser/topic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/ifan/parser/ifan.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1701">
+          <caret line="85" column="5" lean-forward="false" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/concurrent.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+        <state relative-caret-position="2163">
+          <caret line="105" column="16" lean-forward="true" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/spider/pingwest/parser/pingwestList.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Golang/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11886">
+          <caret line="570" column="0" lean-forward="true" selection-start-line="570" selection-start-column="0" selection-end-line="570" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/types.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/ifan/parser/ifanList.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/chule/parser/chule.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/concurrent.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/worker.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/36ke/parser/topic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/ifan/parser/ifan.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1701">
+          <caret line="85" column="5" lean-forward="true" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/pingwest/parser/pingwest.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="27" />
+          <folding>
+            <element signature="e#16#135#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/dupllication.go" />
+    <entry file="file://$PROJECT_DIR$/persist/dupllication.go" />
     <entry file="file://$PROJECT_DIR$/persist/itemsaver_redis.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-97">
           <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/chule/parser/chuleList.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fetcher/fetcher.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/pingwest/parser/pingwestList.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/pingwest/parser/pingwest.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1218">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
-            <element signature="e#17#157#0" expanded="true" />
+            <element signature="e#16#135#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/PuerkitoBio/goquery/iteration.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Golang/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11823">
+          <caret line="567" column="0" lean-forward="false" selection-start-line="567" selection-start-column="0" selection-end-line="567" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/chule/parser/chule.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/worker.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/36ke/parser/topic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/ifan/parser/ifan.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1701">
+          <caret line="85" column="5" lean-forward="false" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/ifan/parser/ifanList.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/concurrent.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2121">
+          <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/huxiuDetail/parser/columnSource.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523680356547" expanded="true" signature="6773:7215" ph="..." />
+            <marker date="1523680356547" expanded="true" signature="6791:6841" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="6869:6919" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="6967:7001" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="7020:7074" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="7085:7114" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="7177:7207" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="69911:71513" ph="..." />
+            <marker date="1523680356547" expanded="true" signature="69975:70808" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70048:70800" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70170:70241" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70277:70414" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70320:70400" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70454:70620" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70503:70598" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70678:70788" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70721:70774" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70852:70969" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="71013:71130" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="71063:71124" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="71177:71376" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="71221:71370" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/huxiu/parser/column.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="903">
+          <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/huxiu/parser/columnSource.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5523">
+          <caret line="263" column="25" lean-forward="false" selection-start-line="263" selection-start-column="25" selection-end-line="263" selection-end-column="25" />
+          <folding>
+            <marker date="1523680356547" expanded="true" signature="6773:7215" ph="..." />
+            <marker date="1523680356547" expanded="true" signature="6791:6841" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="6869:6919" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="6967:7001" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="7020:7074" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="7085:7114" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="7177:7207" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="69911:71513" ph="..." />
+            <marker date="1523680356547" expanded="true" signature="69975:70808" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70048:70800" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70170:70241" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70277:70414" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70320:70400" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70454:70620" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70503:70598" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70678:70788" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70721:70774" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="70852:70969" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="71013:71130" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="71063:71124" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="71177:71376" ph="{...}" />
+            <marker date="1523680356547" expanded="true" signature="71221:71370" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/types.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modle/news.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/huxiu/parser/columnList.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/huxiuDetail/parser/columnList.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/huxiuDetail/parser/column.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding>
+            <element signature="e#16#88#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+        <state relative-caret-position="126">
+          <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
           <folding>
-            <element signature="e#14#249#0" expanded="true" />
-            <element signature="e#1051#1553#0" expanded="false" />
-            <element signature="e#1569#2072#0" expanded="false" />
+            <element signature="e#14#337#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/huxiuDetail/parser/columnDetail.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="48" column="23" lean-forward="true" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
